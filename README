@@ -1,0 +1,38 @@
+
+    Use the Hopcroft-Karp algorithm to find a maximum
+    matching or maximum independent set of a bipartite graph.
+    Next, find a minimum vertex cover by finding the 
+    complement of a maximum independent set.
+
+    The function takes as input two dictionaries, one for the
+    left vertices and one for the right vertices. Each key in 
+    the left dictionary is a left vertex with a value equal to 
+    a list of the right vertices that are connected to the key 
+    by an edge. The right dictionary is structured similarly.
+
+    The output is a dictionary with keys equal to the vertices
+    in a minimum vertex cover and values equal to lists of the 
+    vertices connected to the key by an edge.
+
+    For example, using the following simple bipartite graph:
+
+    1000 2000
+    1001 2000
+
+    where vertices 1000 and 1001 each have one edge and 2000 has 
+    two edges, the input would be:
+
+    left = {1000: [2000], 1001: [2000]}
+    right = {2000: [1000, 1001]}
+
+    and the ouput or minimum vertex cover would be:
+
+    {2000: [1000, 1001]}
+
+    with vertex 2000 being the minimum vertex cover. See MVC_execute.py
+    and simple_graph.txt for an example of how to use the code.
+
+    The code can also generate a bipartite graph with an arbitrary
+    number of edges and vertices in the format of simple_graph.txt,
+    write the graph to a file, and read the graph and convert it to the 
+    appropriate format.
